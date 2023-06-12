@@ -96,6 +96,7 @@ void CBReclaimTask::AssignTo(CCircuitUnit* unit)
 
 bool CBReclaimTask::Reevaluate(CCircuitUnit* unit)
 {
+	// TODO: Ratden - Here is where we would look at things like solar reclaim :)
 	if (!isMetal) {
 		return true;
 	}

@@ -57,6 +57,7 @@ void CSuperTask::Start(CCircuitUnit* unit)
 
 void CSuperTask::Update()
 {
+	// TODO : Ratden - Nuke target exists in here
 	CCircuitAI* circuit = manager->GetCircuit();
 	const int frame = circuit->GetLastFrame();
 	CCircuitUnit* unit = *units.begin();
@@ -128,6 +129,7 @@ void CSuperTask::Update()
 			}
 		}
 	}
+	// Ratden : Here allegedly 
 	const float maxCost = cdef->IsAttrStock() ? cdef->GetWeaponDef()->GetCostM() : cdef->GetCostM() * 0.01f;
 	if ((groupIdx < 0) || (cost < maxCost)) {
 		TRY_UNIT(circuit, unit,
